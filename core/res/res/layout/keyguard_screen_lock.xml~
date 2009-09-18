@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+**
+** Copyright 2008, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License")
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License http://start.ubuntu.com/9.04/at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
+<!-- This is the general lock screen which shows information about the
+  state of the device, as well as instructions on how to get past it
+  depending on the state of the device.  It is the same for landscape
+  and portrait.-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="bottom"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+      >
+
+    <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:background="@android:drawable/zzlockscreenback"
+      >
+
+    <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:background="@android:drawable/zzlockdock"
+      android:layout_marginTop="5dip"
+      android:paddingTop="0dip"
+      android:paddingBottom="10dip"
+      >
+      
+        <!-- time and date -->
+        <TextView android:id="@+id/time"
+                  android:layout_width="fill_parent"
+                  android:layout_height="85px"
+                  android:gravity="center"
+                  android:textColor="#ffffffff"
+                  android:textSize="70sp"
+
+                  android:shadowColor = "#FF000000"
+                  android:shadowDx = "1.2"
+                  android:shadowDy = "1.2"
+                  android:shadowRadius="1"
+                  />
+
+
+        <TextView android:id="@+id/date"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:textColor="#ffffffff"
+                  android:textSize="16sp"
+
+                  android:shadowColor = "#FF000000"
+                  android:shadowDx = "1.2"
+                  android:shadowDy = "1.2"
+                  android:shadowRadius="1"
+
+                  />
+
+        <!-- next alarm info -->
+
+        <LinearLayout android:id="@+id/nextAlarmInfo"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+              >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6dip"
+                android:baselineAligned="true"
+                android:src="@android:drawable/ic_lock_idle_alarm"
+                android:gravity="center"
+            />
+
+            <TextView android:id="@+id/nextAlarmText"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textColor="#ffffffff"
+                      android:textSize="16sp"
+                      android:gravity="center"
+
+                      android:shadowColor = "#FF000000"
+                      android:shadowDx = "1.2"
+                      android:shadowDy = "1.2"
+                      android:shadowRadius="1"
+ 
+            />
+        </LinearLayout>
+
+        </LinearLayout>
+
+      <!-- This is now invisible! Controls T-mobile on lockscreen (Stericson) -->
+      <!-- when sim is present -->
+      <TextView android:id="@+id/headerSimOk1"
+                android:layout_width="0dip"
+                android:layout_height="0dip"
+                android:gravity="center"
+                android:textSize="0sp"/>
+      <TextView android:id="@+id/headerSimOk2"
+                android:layout_width="0dip"
+                android:layout_height="0dip"
+                android:gravity="center"
+                android:textSize="0sp"/>
+
+      <!-- when sim is missing / locked -->
+        <TextView android:id="@+id/headerSimBad1"
+                  android:layout_width="0dip"
+                  android:layout_height="0dip"
+                  android:gravity="center"
+                  android:text="@android:string/lockscreen_missing_sim_message"
+                  android:textAppearance="?android:attr/textAppearanceLarge"/>
+        <TextView android:id="@+id/headerSimBad2"
+                  android:layout_width="0dip"
+                  android:layout_height="0dip"
+                  android:layout_marginTop="0dip"
+                  android:layout_marginBottom="dip"
+                  android:gravity="center"
+		  android:text="@android:string/lockscreen_missing_sim_instructions"
+		  android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+<!-- pointless -->
+
+<<<<<<< HEAD:core/res/res/layout/keyguard_screen_lock.xml~
+=======
+
+
+>>>>>>> 4e13e5a6b0e8abb0f87318c279f4609a584367c4:core/res/res/layout/keyguard_screen_lock.xml~
+     <!-- Adjustment if somethings not showing -->
+
+              <View android:id="@+id/ContentSpaceAdjuster"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dip"
+<<<<<<< HEAD:core/res/res/layout/keyguard_screen_lock.xml~
+                    android:layout_marginTop="250dip"
+=======
+                    android:layout_marginTop="240dip"
+>>>>>>> 4e13e5a6b0e8abb0f87318c279f4609a584367c4:core/res/res/layout/keyguard_screen_lock.xml~
+                    android:background="@android:drawable/divider_horizontal_bright"
+                    />
+
+        <!-- Start of settings group -->
+
+        <AbsoluteLayout android:id="@+id/settingsgroup"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+<<<<<<< HEAD:core/res/res/layout/keyguard_screen_lock.xml~
+                android:layout_height="250dip"
+=======
+                android:layout_height="240dip"
+>>>>>>> 4e13e5a6b0e8abb0f87318c279f4609a584367c4:core/res/res/layout/keyguard_screen_lock.xml~
+              >
+
+
+                <CheckBox
+                        android:id="@+id/modbox"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/zzlockscreenfocus"
+	                android:layout_y="0px"
+		        android:layout_x="0px"
+                   />
+
+            <TextView android:id="@+id/button1text"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textSize="20sp"
+                      android:layout_y="5px"
+	              android:layout_x="50px"
+		      android:text="@android:string/zz_button1"
+	              android:textColor="#ffffffff"
+
+                      android:shadowColor = "#FF000000"
+                      android:shadowDx = "1.2"
+                      android:shadowDy = "1.2"
+                      android:shadowRadius="1"
+            />
+
+                <CheckBox
+                        android:id="@+id/modbox2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/zzlockscreenfocus"
+	                android:layout_y="50px"
+		        android:layout_x="0px"
+                   />
+
+
+            <TextView android:id="@+id/button2text"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textSize="20sp"
+                      android:layout_y="55px"
+	              android:layout_x="50px"
+		      android:text="@android:string/zz_button2"
+	              android:textColor="#ffffffff"
+
+                      android:shadowColor = "#FF000000"
+                      android:shadowDx = "1.2"
+                      android:shadowDy = "1.2"
+                      android:shadowRadius="1"
+            />
+
+
+        </AbsoluteLayout>
+
+     <!-- This is the custom batt image and percentage on screen (Stericson) -->
+
+
+        <!-- battery info Portrait-->
+
+        <AbsoluteLayout android:id="@+id/batteryInfo"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+<<<<<<< HEAD:core/res/res/layout/keyguard_screen_lock.xml~
+                android:layout_height="250dip"
+=======
+                android:layout_height="240dip"
+>>>>>>> 4e13e5a6b0e8abb0f87318c279f4609a584367c4:core/res/res/layout/keyguard_screen_lock.xml~
+              >
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+              >
+
+            <ImageView android:id="@+id/batteryInfoIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="0dip"
+                android:layout_marginBottom="0dip"
+                />
+
+            <TextView android:id="@+id/batteryInfoText"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textSize="20sp"
+                      android:gravity="center"
+                      android:layout_marginTop="0dip"
+                      android:layout_marginBottom="0dip"
+	              android:textColor="#ffffffff"
+
+                      android:shadowColor = "#FF000000"
+                      android:shadowDx = "1.2"
+                      android:shadowDy = "1.2"
+                      android:shadowRadius="1"
+            />
+        </LinearLayout>
+
+        </AbsoluteLayout>
+
+        <!-- End of batt image and percentage (Stericson) -->
+
+
+        <!-- Start of music group -->
+
+        <AbsoluteLayout android:id="@+id/musicgroup"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+<<<<<<< HEAD:core/res/res/layout/keyguard_screen_lock.xml~
+                android:layout_height="250dip"
+=======
+                android:layout_height="240dip"
+>>>>>>> 4e13e5a6b0e8abb0f87318c279f4609a584367c4:core/res/res/layout/keyguard_screen_lock.xml~
+              >
+
+
+            <TextView android:id="@+id/musicfuturetext"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textSize="20sp"
+                      android:layout_y="0px"
+	              android:layout_x="0px"
+		      android:text="@android:string/zz_musicfuture"
+	              android:textColor="#ffffffff"
+
+                      android:shadowColor = "#FF000000"
+                      android:shadowDx = "1.2"
+                      android:shadowDy = "1.2"
+                      android:shadowRadius="1"
+
+            />
+
+
+        <AbsoluteLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_y="200px"
+              >
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+              >
+
+        <AbsoluteLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+              >
+	            <ImageButton android:id="@+id/rewindIcon"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+                        android:src="@android:drawable/ic_media_previous"	                
+                        android:background="@drawable/zzlockscreenfocus"
+	                android:layout_y="0px"
+		        android:layout_x="0px"
+                />
+
+	            <ImageButton android:id="@+id/playIcon"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+                        android:src="@android:drawable/ic_media_play"	                
+                        android:background="@drawable/zzlockscreenfocus"
+	                android:layout_y="0px"
+		        android:layout_x="75px"
+                />
+
+	            <ImageButton android:id="@+id/pauseIcon"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+                        android:src="@android:drawable/ic_media_pause"	                
+                        android:background="@drawable/zzlockscreenfocus"
+	                android:layout_y="0px"
+		        android:layout_x="75px"
+                />
+
+	            <ImageButton android:id="@+id/forwardIcon"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+                        android:src="@android:drawable/ic_media_next"	                
+                        android:background="@drawable/zzlockscreenfocus"
+	                android:layout_y="0px"
+		        android:layout_x="150px"
+                />
+
+             </AbsoluteLayout>
+            </LinearLayout>
+           </AbsoluteLayout>
+         </AbsoluteLayout>
+
+
+        <!-- Adjustment if Alarm info not showing -->
+
+              <View android:id="@+id/SpaceAdjuster" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="0dip" 
+<<<<<<< HEAD:core/res/res/layout/keyguard_screen_lock.xml~
+                    android:layout_marginTop="25dip"
+                    android:background="@android:drawable/divider_horizontal_bright"
+                    />
+=======
+                    android:layout_marginTop="35dip"
+                    android:background="@android:drawable/divider_horizontal_bright"
+                    />
+
+>>>>>>> 4e13e5a6b0e8abb0f87318c279f4609a584367c4:core/res/res/layout/keyguard_screen_lock.xml~
+        
+        <!-- "Notifications portrait mode" -->
+
+
+                <AbsoluteLayout android:id="@+id/keyguardnotifications"
+	                android:orientation="horizontal"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+                        android:background="@android:drawable/zzlockdockbottom"
+	                android:layout_y="0px"
+		        android:layout_x="0px"
+                        android:paddingTop="5dip"
+                        android:paddingBottom="5dip"
+
+	              >
+	
+	            <ImageButton android:id="@+id/settingsIcon"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+                        android:src="@android:drawable/zzicon_setting"	                
+                        android:background="@drawable/zzlockscreenfocus"
+	                android:layout_y="0px"
+		        android:layout_x="0px"
+                />
+	            <ImageButton android:id="@+id/batteryIcon"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:src="@android:drawable/zzbattery_icon"
+                        android:background="@drawable/zzlockscreenfocus"
+	                android:layout_y="0px"
+		        android:layout_x="80px"
+                />
+	            <ImageButton android:id="@+id/musicIcon"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:src="@android:drawable/zzicon_music"
+                        android:background="@drawable/zzlockscreenfocus"	                
+                        android:layout_y="0px"
+		        android:layout_x="160px"
+                />
+	            <ImageButton android:id="@+id/messagesIcon"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:src="@android:drawable/zzmessages_icon"
+                        android:background="@drawable/zzlockscreenfocus"	                
+	                android:layout_y="0px"
+		        android:layout_x="240px"
+                />
+
+        </AbsoluteLayout>                               
+        
+        <!-- "End of notifications" -->
+
+
+        <!-- lock icon with 'screen locked' message
+             (shown when SIM card is present) -->
+        <LinearLayout android:id="@+id/screenLockedInfo"
+            android:orientation="horizontal"
+            android:layout_width="0dip"
+            android:layout_height="0dip"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="0dip"
+                android:layout_height="0dip"
+                android:layout_marginRight="6dip"
+                android:baselineAligned="true"
+                android:src="@android:drawable/ic_lock_idle_lock"
+                android:gravity="center"
+            />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="0dip"
+                android:textSize="12sp"
+                android:text="@android:string/lockscreen_screen_locked"
+                android:gravity="center"            
+                />
+        </LinearLayout>
+
+        <!-- message about how to unlock
+             (shown when SIM card is present) -->
+        <TextView android:id="@+id/lockInstructions"
+                  android:layout_width="0dip"
+                  android:layout_height="0dip"
+                  android:layout_marginBottom="5dip"
+                  android:gravity="center"
+                  android:textSize="12sp"/>
+
+
+        <!-- emergency call button shown when sim is missing or PUKd -->
+        <Button
+            android:id="@+id/emergencyCallButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:layout_marginTop="5dip"
+            android:layout_gravity="center_horizontal"
+            android:drawableLeft="@drawable/ic_emergency"
+            android:drawablePadding="8dip"
+            android:text="@android:string/lockscreen_emergency_call"
+           />
+           
+    </LinearLayout>
+</LinearLayout>
