@@ -1197,14 +1197,14 @@
 
     <!-- When the lock screen is showing and the phone plugged in, and the battery
          is not fully charged, show the current charge %.  -->
-    <string name="lockscreen_plugged_in">Charging (<xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g>)</string>
+    <string name="lockscreen_plugged_in"><xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
     <!-- When the lock screen is showing, the phone is plugged in and the battery is fully
          charged, say that it is charged. -->
     <string name="lockscreen_charged">Charged.</string>
 
     <!-- When the lock screen is showing and the battery is low, warn user to plug
          in the phone soon. -->
-    <string name="lockscreen_low_battery">Connect your charger.</string>
+    <string name="lockscreen_low_battery"><xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
 
     <!-- Shown in the lock screen when there is no SIM card. -->
     <string name="lockscreen_missing_sim_message_short">No SIM card.</string>
@@ -1892,5 +1892,24 @@
 
      <!-- Title for the unselected state of a CompoundButton. -->
      <string name="accessibility_compound_button_unselected">not checked</string>
+
+    <!-- Additions by Cyanogen -->
+    <string name="zz_reboot_system">Reboot phone</string>
+    <string name="zz_reboot_progress">Rebooting phone\u2026</string>
+    <string name="zz_reboot_confirm">Your phone will reboot.</string>
+    <string name="zz_global_action_reboot">Reboot phone</string>
+
+    <!-- Additions by Stericson -->
+    <string name="zz_musicfuture">Music controller, work in progress!</string>
+    <string name="zz_button1">Always lock status bar</string>
+    <string name="zz_button2">On touch, Keep display on</string>
+    <string name="zz_button3">Disable Animations</string>
+    <string name="zz_button4">Disable Interactivity</string>
+    <string name="zzline1">Stericson and JDWME LockScreen</string>
+    <string name="zzline2">XDA Android Developers </string>
+    <string name="zzline3">Version: 0.4</string>
+    <string name="zzline4">XDA and Android,</string>
+    <string name="zzline5">Nothings</string>
+    <string name="zzline6">Impossible</string>
 
 </resources>
