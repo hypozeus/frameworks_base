@@ -230,7 +230,7 @@ public abstract class IccPhoneBookInterfaceManager extends IIccPhoneBook.Stub {
      */
     public List<AdnRecord> getAdnRecordsInEf(int efid) {
 
-        if (getCallingUid() != 1000 && phone.getContext().checkCallingOrSelfPermission(
+        if (phone.getContext().checkCallingOrSelfPermission(
                 android.Manifest.permission.READ_CONTACTS)
                 != PackageManager.PERMISSION_GRANTED) {
             throw new SecurityException(
