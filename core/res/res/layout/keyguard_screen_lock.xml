@@ -142,7 +142,7 @@
 
                 <CheckBox
                         android:id="@+id/modbox"
-                        android:layout_width="wrap_content"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/zzlockscreenfocus"
                         android:layout_y="0px"
@@ -167,7 +167,7 @@
 
                 <CheckBox
                         android:id="@+id/modbox2"
-                        android:layout_width="wrap_content"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/zzlockscreenfocus"
                         android:layout_y="50px"
@@ -193,7 +193,7 @@
 
                 <CheckBox
                         android:id="@+id/modbox3"
-                        android:layout_width="wrap_content"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/zzlockscreenfocus"
                         android:layout_y="100px"
@@ -217,7 +217,7 @@
 
                 <CheckBox
                         android:id="@+id/modbox4"
-                        android:layout_width="wrap_content"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/zzlockscreenfocus"
                         android:layout_y="150px"
@@ -241,7 +241,7 @@
 
                 <CheckBox
                         android:id="@+id/modbox5"
-                        android:layout_width="wrap_content"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/zzlockscreenfocus"
                         android:layout_y="200px"
@@ -263,7 +263,29 @@
 
             />
 
+                <CheckBox
+                        android:id="@+id/modbox6"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/zzlockscreenfocus"
+                        android:layout_y="250px"
+	                android:layout_x="5px"
+                />
 
+            <TextView 
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_y="265px"
+	              android:layout_x="45px"
+		      android:text="@android:string/zz_button6"
+	              android:textColor="#ffffffff"
+
+                      android:shadowColor = "#FF000000"
+                      android:shadowDx = "1.2"
+                      android:shadowDy = "1.2"
+                      android:shadowRadius="1"
+
+            />
 
         </AbsoluteLayout>
  

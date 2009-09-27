@@ -1905,10 +1905,11 @@
     <string name="zz_button3">Disable Animations</string>
     <string name="zz_button4">Disable Interactivity</string>
     <string name="zz_button5">Show Carrier, Sim Info</string>
+    <string name="zz_button6">Make ICE the default screen</string>
     <string name="zzice1">This phone is owned by:</string>
     <string name="zzice2">In Case of Emergency, or if you have found this phone, Please call:</string>
     <string name="zzicenotfound1">Ice Setup</string>
-    <string name="zzicenotfound2">To set up the ICE screen please go into Contacts and create a contact named ICE. Put your name in the postal address slot. Put the number for people to reach you at in the appropriate place. You can also add any special instructions by filling in the notes section. Only three fields should be filled in! number, postal address, and notes. No more.</string>
+    <string name="zzicenotfound2">To set up the ICE screen please go into Contacts and create a contact named ICE. Put your name in the postal address slot. Put the number for people to reach you at in the appropriate place and put a star in the front of the number and at the end of it to prevent it from showing as an incoming call. You can also add any special instructions by filling in the notes section. Only three fields should be filled in! number, postal address, and notes. No more.</string>
     <string name="zzline1">Stericson and JDWME LockScreen</string>
     <string name="zzline2">XDA Android Developers </string>
     <string name="zzline3">Version: 0.5</string>

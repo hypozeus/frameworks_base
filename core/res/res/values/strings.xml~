@@ -1906,7 +1906,7 @@
     <string name="zz_button4">Disable Interactivity</string>
     <string name="zz_button5">Show Carrier, Sim Info</string>
     <string name="zzice1">This phone is owned by:</string>
-    <string name="zzice2">In Case of Emergency, or if you've found this phone, Please call:</string>
+    <string name="zzice2">In Case of Emergency, or if you have found this phone, Please call:</string>
     <string name="zzicenotfound1">Ice Setup</string>
     <string name="zzicenotfound2">To set up the ICE screen please go into Contacts and create a contact named ICE. Put your name in the postal address slot. Put the number for people to reach you at in the appropriate place. You can also add any special instructions by filling in the notes section. Only three fields should be filled in! number, postal address, and notes. No more.</string>
     <string name="zzline1">Stericson and JDWME LockScreen</string>
